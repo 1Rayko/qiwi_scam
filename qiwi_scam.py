@@ -1,4 +1,4 @@
-from qiwi_api import Qiwi
+
 from colorama import init
 from SimpleQIWI import *
 import os
@@ -34,8 +34,9 @@ print("""\033[33m
 [99] -Выход\033[39m""")
 while True :
     n = str(input("\033[35m[*]\033[39"))
-    api = QApi(token=tk, phone=ph)
+
     if n == ('1'):
+
         tk = str(input("\033[35mВведи токен qiwi:\033[39m"))
         ph = str(input("\033[35mВведи Телефон :\033[39m"))
         token = tk         # https://qiwi.com/api
@@ -48,6 +49,7 @@ while True :
         pi = str(input('\033[35m'+'Телефон получателя:'+'\033[39m'))
         com = str(input('\033[35m'+'Комментариый:'+'\033[39m'))
         m = float(input('\033[35m'+'Сколько вывести:'+'\033[39m'))
+        api = QApi(token=tk, phone=ph)
         token = tk         # https://qiwi.com/api
         phone = ph
 
